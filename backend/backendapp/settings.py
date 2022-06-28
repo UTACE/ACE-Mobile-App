@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 
+# Store the SECRET_KEY in a separate file "secret.py" so that it is not in the repository. 
+from backendapp.secret import SECRET
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-dfvobol2hwpvbi#&bndc24zi&mvvcr@o-a(a7=hm01os2)j$04'
+SECRET_KEY = SECRET
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
